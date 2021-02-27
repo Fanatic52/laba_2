@@ -108,27 +108,50 @@ public class Tasks {
      *                 считати текст
      * @param toPath шлях, де розташований файл куда
      *                 записати результат
-     * @throws IOException якщо по такому шляху {@code path} неіснує
-     * або помилки повязані з відкриванням/считуванням/запизування
+     * @throws IOException якщо по такому шляху {@code toPath} і {@code fromPath}
+     * неіснує або помилки повязані з відкриванням/считуванням/запизування
      * данних з файла
      */
     public static void taskTree(String fromPath, String toPath) throws IOException {
         //считуємо сюда данні з файла
         String text = fileReader(fromPath);
-        //Конвертуєм String в char[]
-        char[] chars = text.toCharArray();
-        //викликаєм метод для видалення клонів символів.
-        Character[] charsWithoutClone = removeClone(chars);
-        //записуєм результат
-        String result =  "К-ть всіх cимволів - " + text.length();
-        result += "\nК-ть унікальних cимволів - " + charsWithoutClone.length;
+        //находим всі мінімальні слова
+        String result = searchMinWords(text);
         //записуєм в файл
         FileWriter(toPath, result);
     }
+    /**Цей метод повертає всі найменші слова
+     * @param text любий набір символів
+     * @return набір слів
+     */
+    public static String searchMinWords(String text) {
+        //Видаляєм всі розділові знаки
+        text = text.replaceAll("[.!,?]", "");
+        //Створюємо масив для всіх слів
+        String[] words = text.split("[\\s]+");
+        //Створюємо зміну для визначення мінімального розміру слів
+        int minLength = Integer.MAX_VALUE;
+        //Проходим цілий масив слів, і визначаєм мінімальный розмір слів
+        for (String word : words) {
+            //якщо розмір слова менше за minLength
+            //то присвоюємо розмір слова для нього
+            if(minLength > word.length()) minLength = word.length();
+        }
+        //Сиворюємо зміну result для запису всіх слів
+        //використовуємо StringBuilder для швидкої контенентація строк
+        StringBuilder result = new StringBuilder();
+        //Проходим цілий масив слів, і записуєм всі слова з мінімальним розміром
+        for(String word : words){
+            //якщо розмір слова = minLength
+            //то для result додаєм це слово
+            if(word.length() == minLength) result.append(word).append("\n");
+        }
+        //Конвертуєм  result в String, та повертаєм його
+        return result.toString();
+    }
 
     /** Цей метод считує з файла весь текст
-     *  розташованим в {@code path}, якщо такого
-     *  файла немає то викидається помилка IOException
+     *  розташованим в {@code path}
      * @param path шлях, де розташований файл
      * @return весь зчитаний текст з файла
      * @throws IOException якщо по такому шляху {@code path} неіснує
@@ -142,8 +165,7 @@ public class Tasks {
         //якщо його немає, то викидається помилка IOException
         if(!isFile.isFile()) throw new IOException("Файл не знайдено!");
         //створюємо обєкт BufferedReader для зчитування данних з файла
-        FileReader readerFile = new FileReader(path);
-        BufferedReader reader = new BufferedReader(readerFile);
+        BufferedReader reader = new BufferedReader(new FileReader(path));
         //створюємо обєкт String для построкового считування данних з файла
         String line;
         //створюємо обєкт BufferedReader для швидкої контенентація строк
@@ -158,8 +180,7 @@ public class Tasks {
         return lines.toString();
     }
     /** Цей метод записує в файл весь переданий
-     * текст {@code text}, якщо такого
-     *  файла немає то викидається помилка IOException
+     * текст {@code text}
      * @param path шлях, де розташований файл
      * @throws IOException якщо по такому шляху {@code path} неіснує
      * файла , або помилки повязані з відкриванням/записуванням
@@ -172,8 +193,7 @@ public class Tasks {
         //якщо його немає, то викидається помилка IOException
         if(!isFile.isFile()) throw new IOException("Файл не знайдено!");
         //створюємо обєкт BufferedWriter для запису данних з файла
-        FileWriter inputFile = new FileWriter(path);
-        BufferedWriter writer = new BufferedWriter(inputFile);
+        BufferedWriter writer = new BufferedWriter(new FileWriter(path));
         //записуєм в файл
         writer.write(text);
         //очищаєм поток

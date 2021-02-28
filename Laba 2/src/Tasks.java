@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.NotNull;
+
 import java.io.*;
 import java.util.ArrayList;
 
@@ -6,7 +8,7 @@ public class Tasks {
      * та кількість унікальних слів з {@code text}
      * @param text любий набір символів
      */
-    public static void taskOneOne(String text) {
+    public static void taskOneOne(@NotNull  String text) {
         //Видаляєм всі розділові знаки
         text = text.replaceAll("[.!,?]", "");
         //Створюємо масив для всіх слів
@@ -27,7 +29,7 @@ public class Tasks {
      * @param words масив набіров символів
      * @return масив {@code words} без клонів
      */
-    public static String[] removeClone(String[] words) {
+    private static String[] removeClone(String[] words) {
         //Створюємо Arraylist для унікальних слів
         ArrayList<String> wordsWithoutClone = new ArrayList<>();
         //Проходим ввесь масив
@@ -46,7 +48,7 @@ public class Tasks {
      * та кількість унікальних символів з {@code text}
      * @param text любий набір символів
      */
-    public static void taskOneTwo(String text){
+    public static void taskOneTwo(@NotNull String text){
         //Конвертуєм String в char[]
         char[] chars = text.toCharArray();
         //викликаєм метод для видалення клонів символів.
@@ -60,7 +62,7 @@ public class Tasks {
      * @param chars масив символів
      * @return масив {@code words} без клонів
      */
-    public static Character[] removeClone(char[] chars) {
+    private static Character[] removeClone(char[] chars) {
         //Створюємо Arraylist для унікальних символів
         ArrayList<Character> charsWithoutClone = new ArrayList<>();
         //Проходим ввесь масив
@@ -82,7 +84,7 @@ public class Tasks {
      * файла , або помилки повязані з відкриванням/зчитуванням
      * данних з файла
      */
-    public static void taskTwo(String path) throws IOException {
+    public static void taskTwo(@NotNull String path) throws IOException {
         //считуємо сюда данні з файла
         String text = fileReader(path);
         //рахуєм кількість речень
@@ -95,7 +97,7 @@ public class Tasks {
      * @param text любий набір символів
      * @return кількість речень
      */
-    public static int countSentences(String text) {
+    private static int countSentences(String text) {
         //розбиваєм текст на речення і рахуєм їхню кількість
         return text.split("[.?!]+").length;
     }
@@ -112,7 +114,7 @@ public class Tasks {
      * неіснує або помилки повязані з відкриванням/считуванням/запизування
      * данних з файла
      */
-    public static void taskTree(String fromPath, String toPath) throws IOException {
+    public static void taskTree(@NotNull String fromPath, String toPath) throws IOException {
         //считуємо сюда данні з файла
         String text = fileReader(fromPath);
         //находим всі мінімальні слова
@@ -124,7 +126,7 @@ public class Tasks {
      * @param text любий набір символів
      * @return набір слів
      */
-    public static String searchMinWords(String text) {
+    private static String searchMinWords(String text) {
         //Видаляєм всі розділові знаки
         text = text.replaceAll("[.!,?]", "");
         //Створюємо масив для всіх слів

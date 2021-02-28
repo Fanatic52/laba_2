@@ -16,12 +16,19 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c1a4393-7ab4-415e-8f74-9c3da684aaaf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Laba 2/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Laba 2/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laba 2/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Laba 2/output.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Лабараторна робота №2.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba 2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Laba 2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Laba 2/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laba 2/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Laba 2/src/Tasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laba 2/src/Tasks.java" afterDir="false" />
     </list>
@@ -31,12 +38,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="PUSH_TAGS">
-      <GitPushTagMode>
-        <option name="argument" value="--tags" />
-        <option name="title" value="All" />
-      </GitPushTagMode>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -53,6 +54,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -79,6 +84,14 @@
       <option name="presentableId" value="Default" />
       <updated>1614326747117</updated>
     </task>
+    <task id="LOCAL-00001" summary="renewing TaskTree">
+      <created>1614441288813</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1614441288813</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -96,14 +109,28 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="renewing TaskTree" />
+    <option name="LAST_COMMIT_MESSAGE" value="renewing TaskTree" />
   </component>
   <component name="WindowStateProjectService">
     <state x="713" y="340" key="#Notifications" timestamp="1614440421331">
@@ -114,30 +141,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614441140622" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1614326800542">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1614525431730">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1614326800542" />
-    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1614438880334">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1614525431730" />
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1614441566330">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1614438880334" />
-    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1614438880334">
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1614441566330" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1614441566330">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1614438880334" />
-    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1614438880334">
+    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1614441566330" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1614441566330">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1614438880334" />
-    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1614438880334">
+    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1614441566330" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1614441566330">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1614438880334" />
-    <state x="552" y="300" width="816" height="491" key="Vcs.Push.Dialog.v2" timestamp="1614441067003">
+    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1614441566330" />
+    <state x="761" y="139" key="RollbackChangesDialog" timestamp="1614441342813">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="300" width="816" height="491" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1614441067003" />
+    <state x="761" y="139" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614441342813" />
+    <state x="552" y="300" width="816" height="491" key="Vcs.Push.Dialog.v2" timestamp="1614441296803">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="300" width="816" height="491" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1614441296803" />
+    <state x="548" y="416" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1614525508749">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="548" y="416" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040@0.0.1920.1040" timestamp="1614525508749" />
     <state x="777" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614440848599">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

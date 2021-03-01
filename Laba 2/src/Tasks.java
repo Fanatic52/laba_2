@@ -1,3 +1,4 @@
+import lombok.Cleanup;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.*;
@@ -8,7 +9,7 @@ public class Tasks {
      * та кількість унікальних слів з {@code text}
      * @param text любий набір символів
      */
-    public static void taskOneOne(@NotNull  String text) {
+    public static void taskOneOne(@NotNull String text) {
         //Видаляєм всі розділові знаки
         text = text.replaceAll("[.!,?]", "");
         //Створюємо масив для всіх слів
@@ -167,7 +168,8 @@ public class Tasks {
         //якщо його немає, то викидається помилка IOException
         if(!isFile.isFile()) throw new IOException("Файл не знайдено!");
         //створюємо обєкт BufferedReader для зчитування данних з файла
-        BufferedReader reader = new BufferedReader(new FileReader(path));
+        //@Cleanup - завдяки цьому , метод Close() виконається автоматично при виході з метода
+        @Cleanup BufferedReader reader = new BufferedReader(new FileReader(path));
         //створюємо обєкт String для построкового считування данних з файла
         String line;
         //створюємо обєкт BufferedReader для швидкої контенентація строк
@@ -176,8 +178,6 @@ public class Tasks {
         while ((line = reader.readLine()) != null) {
             lines.append(line);
         }
-        //закриваєм файл
-        reader.close();
         //Повертаєм увесь считаний текст з файла
         return lines.toString();
     }
@@ -195,12 +195,11 @@ public class Tasks {
         //якщо його немає, то викидається помилка IOException
         if(!isFile.isFile()) throw new IOException("Файл не знайдено!");
         //створюємо обєкт BufferedWriter для запису данних з файла
-        BufferedWriter writer = new BufferedWriter(new FileWriter(path));
+        //@Cleanup - завдяки цьому , метод Close() виконається автоматично при виході з метода
+        @Cleanup BufferedWriter writer = new BufferedWriter(new FileWriter(path));
         //записуєм в файл
         writer.write(text);
         //очищаєм поток
         writer.flush();
-        //закриваєм файл
-        writer.close();
     }
 }
